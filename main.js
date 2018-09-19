@@ -11,8 +11,9 @@ let colors = [
 
 
 // count the screen height
-let windowHeight = $(window).height();
-let divHeight = document.getElementById("div-box").style.height = windowHeight - 40 + "px" ;
+let windowHeight = window.innerHeight;
+let divHeight = document.getElementById("div-box").style.height = windowHeight - 100 + "px" ;
+console.log(divHeight);
 
 let manyBoxes = 200;
 makeBoxes(manyBoxes);
