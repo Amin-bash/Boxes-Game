@@ -2,13 +2,19 @@ let colors = [
     '#C94C24',
     '#C4226F',
     '#859835',
-    '#6DA3637',
+    '#33d6d3',
     '#F0AD4E',
     '#1fad39',
     '#377ad2',
     '#831cbf'
 ];
-let manyBoxes = 63;
+
+
+// count the screen height
+let windowHeight = $(window).height();
+let divHeight = document.getElementById("div-box").style.height = windowHeight - 40 + "px" ;
+
+let manyBoxes = 200;
 makeBoxes(manyBoxes);
 let divLength;
 
@@ -26,7 +32,7 @@ function makeBoxes(boxesNumber) {
     }
 
 }
-
+divLength = $('div.box').length;
 let previousElement = null;
 // When you click to hide the box
 $('.boxes').on("click", ".box", function(e) {
@@ -62,7 +68,7 @@ $('.boxes').on("click", ".box", function(e) {
 let timer = 60; // 1 minute timer
 let min = 0;    // 1 minute
 let sec = 0;    // 1 second timer
-let hour = 0;   // 1 hour timer
+  // 1 hour timer
 
 // Start count down
 function startTimer() {
@@ -75,18 +81,19 @@ function startTimer() {
         $("#time").addClass('text-danger');
     }
     if (timer <= 0) {
-      if(divLength >= 30) {
+    
+      if(divLength >= 150) {
         modalsResult("#one-star");
       }
-      if (divLength < 30 && divLength >= 20){
-        modalsResult("#tow-stars");
+      if (divLength >= 100 && divLength < 150){
+        modalsResult("#two-stars");
       }
-      if(divLength <= 10) {
+      if(divLength <= 100) {
         modalsResult("#three-stars");
       }
-        return;
+      return;
     }
-    document.getElementById('time').innerHTML = '<b>Time left: </b>' + hour.toString() + " : " + min.toString() + " : " + sec.toString();
+    document.getElementById('time').innerHTML = '<b>Time left: </b>' + "0" + min.toString() + " : " + sec.toString();
     timer--;
     setTimeout(function() {
         startTimer();
@@ -109,10 +116,6 @@ $('#memberModal').modal({
   backdrop : false,
 });
 $('#memberModal').modal('show');
-$(".btn-close").click(function() {
+$(".btn-start").click(function() {
     startTimer();
 });
-
-
-
-

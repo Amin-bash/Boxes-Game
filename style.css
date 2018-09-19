@@ -26,6 +26,15 @@
     border: 2px solid red;
     opacity: 0.5;
 }
+.stop-scrolling{
+    height: 100%;
+    overflow: hidden;
+}
+.boxes {
+    overflow: hidden;
+    margin-bottom: 30px
+}
+
 
 @media(max-width: 470px){
     .box{

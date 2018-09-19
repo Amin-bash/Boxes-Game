@@ -13,17 +13,16 @@
      <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 
 </head>
-<body>
+<body class="stop-scrolling">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-7 "> <h1 id="time" class="mt-4 text-success"></h1></div>
+            <div class="col-md-7 "> <h1 id="time" class="mt-4 mb-0 text-success"></h1></div>
             <div class=" col-md-6">
-                <h1 class="text-danger-title text-danger my-5">Boxes Game</h1>
+                <h1 class="text-danger-title text-danger my-4">Boxes Game</h1>
             </div>
-            <div id="div-box" class=" col-lg-7 col-md-12 col-sm-12 col-xs-12 p-0 ml-4 boxes"></div>
+            <div id="div-box" class="col-lg-7 col-md-12 col-sm-12 col-xs-12 p-0 ml-4 boxes"></div>
         </div>
     </div>
-
 
     <!--// This Modal for explain how the game work-->
     <div class="modal fade" id="memberModal" tabindex="-1" role="dialog" aria-labelledby="memberModalLabel-1" aria-hidden="true">
@@ -40,7 +39,7 @@
                     <p class="text-warning font-weight-bold">You Will See Your Result After The Time Will Finish</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary btn-close" data-dismiss="modal">Start</button>
+                    <button type="button" class="btn btn-primary btn-start" data-dismiss="modal">Start</button>
                 </div>
             </div>
         </div>
@@ -65,6 +64,7 @@
             </div>
         </div>
     </div>
+
     <!--// This for result two star-->
     <div class="modal fade" id="two-stars" tabindex="-1" role="dialog" aria-labelledby="memberModalLabel-3" aria-hidden="true">
         <div class="modal-dialog">
